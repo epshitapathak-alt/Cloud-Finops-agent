@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: finops-agent-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - PORT=8000
+      - HOST=0.0.0.0
+      - DATABASE_URL=sqlite:///./finops_audit.db
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DRY_RUN_ONLY=true
+      - REQUIRE_HUMAN_APPROVAL=true
+    volumes:
+      - ./data:/app/data
+      - ./terraform/generated:/app/terraform/generated
+    restart: unless-stopped

@@ -1,0 +1,194 @@
+[
+  {
+    "resource_id": "i-09ab7c12f4581ea01",
+    "resource_name": "analytics-worker-dev-01",
+    "resource_type": "EC2",
+    "instance_type": "c5.4xlarge",
+    "cpu_utilization": 4.2,
+    "memory_utilization": 11.5,
+    "monthly_cost": 496.40,
+    "region": "us-east-1",
+    "environment": "development",
+    "resource_status": "running",
+    "criticality": "low",
+    "last_activity": "2026-11-10T14:22:00Z",
+    "tags": {
+      "Owner": "AnalyticsTeam",
+      "CostCenter": "CC-1092",
+      "Environment": "development",
+      "AutoRemediate": "true"
+    }
+  },
+  {
+    "resource_id": "i-03cd45ef88910ab32",
+    "resource_name": "staging-api-service",
+    "resource_type": "EC2",
+    "instance_type": "m5.2xlarge",
+    "cpu_utilization": 7.8,
+    "memory_utilization": 18.2,
+    "monthly_cost": 280.32,
+    "region": "us-west-2",
+    "environment": "staging",
+    "resource_status": "running",
+    "criticality": "medium",
+    "last_activity": "2026-11-12T09:15:00Z",
+    "tags": {
+      "Owner": "PlatformTeam",
+      "CostCenter": "CC-1040",
+      "Environment": "staging"
+    }
+  },
+  {
+    "resource_id": "vol-08ef123456789abcd",
+    "resource_name": "abandoned-backup-volume-dev",
+    "resource_type": "EBS",
+    "instance_type": "gp2-500GB",
+    "cpu_utilization": 0.0,
+    "memory_utilization": 0.0,
+    "monthly_cost": 50.00,
+    "region": "us-east-1",
+    "environment": "development",
+    "resource_status": "available",
+    "criticality": "low",
+    "last_activity": "2026-09-01T00:00:00Z",
+    "tags": {
+      "Owner": "DevOps",
+      "State": "Unattached",
+      "Environment": "development"
+    }
+  },
+  {
+    "resource_id": "vol-078912345678abcdef",
+    "resource_name": "unattached-snapshot-temp",
+    "resource_type": "EBS",
+    "instance_type": "io1-1000GB-3000IOPS",
+    "cpu_utilization": 0.0,
+    "memory_utilization": 0.0,
+    "monthly_cost": 275.00,
+    "region": "us-east-1",
+    "environment": "testing",
+    "resource_status": "available",
+    "criticality": "low",
+    "last_activity": "2026-08-15T12:00:00Z",
+    "tags": {
+      "Owner": "QA",
+      "State": "Unattached",
+      "Environment": "testing"
+    }
+  },
+  {
+    "resource_id": "rds-test-replica-01",
+    "resource_name": "qa-reports-replica",
+    "resource_type": "RDS",
+    "instance_type": "db.r5.2xlarge",
+    "cpu_utilization": 6.1,
+    "memory_utilization": 14.8,
+    "monthly_cost": 720.00,
+    "region": "eu-west-1",
+    "environment": "testing",
+    "resource_status": "available",
+    "criticality": "low",
+    "last_activity": "2026-11-05T18:30:00Z",
+    "tags": {
+      "Owner": "ReportingQA",
+      "Engine": "PostgreSQL",
+      "Environment": "testing"
+    }
+  },
+  {
+    "resource_id": "s3-raw-data-lake-dev",
+    "resource_name": "raw-data-lake-dev-archive",
+    "resource_type": "S3",
+    "instance_type": "Standard-15TB",
+    "cpu_utilization": 0.0,
+    "memory_utilization": 0.0,
+    "monthly_cost": 345.00,
+    "region": "us-east-1",
+    "environment": "development",
+    "resource_status": "active",
+    "criticality": "medium",
+    "last_activity": "2026-07-20T11:00:00Z",
+    "tags": {
+      "Owner": "DataPlatform",
+      "LifecyclePolicy": "none",
+      "Environment": "development"
+    }
+  },
+  {
+    "resource_id": "i-0111222333444555a",
+    "resource_name": "prod-api-gateway-node-01",
+    "resource_type": "EC2",
+    "instance_type": "c5.2xlarge",
+    "cpu_utilization": 73.5,
+    "memory_utilization": 68.2,
+    "monthly_cost": 248.20,
+    "region": "us-east-1",
+    "environment": "production",
+    "resource_status": "running",
+    "criticality": "critical",
+    "last_activity": "2026-11-12T23:55:00Z",
+    "tags": {
+      "Owner": "CoreInfra",
+      "Tier": "MissionCritical",
+      "Environment": "production",
+      "DO_NOT_MODIFY": "true"
+    }
+  },
+  {
+    "resource_id": "rds-prod-user-cluster-primary",
+    "resource_name": "prod-user-cluster-primary",
+    "resource_type": "RDS",
+    "instance_type": "db.r5.4xlarge",
+    "cpu_utilization": 14.2,
+    "memory_utilization": 32.0,
+    "monthly_cost": 1440.00,
+    "region": "us-east-1",
+    "environment": "production",
+    "resource_status": "available",
+    "criticality": "critical",
+    "last_activity": "2026-11-12T23:59:00Z",
+    "tags": {
+      "Owner": "DatabaseSRE",
+      "Tier": "MissionCritical",
+      "Environment": "production"
+    }
+  },
+  {
+    "resource_id": "i-0998877665544332b",
+    "resource_name": "internal-tooling-bastion",
+    "resource_type": "EC2",
+    "instance_type": "t3.medium",
+    "cpu_utilization": 22.0,
+    "memory_utilization": 35.0,
+    "monthly_cost": 30.36,
+    "region": "us-west-2",
+    "environment": "internal",
+    "resource_status": "running",
+    "criticality": "medium",
+    "last_activity": "2026-11-12T16:00:00Z",
+    "tags": {
+      "Owner": "Security",
+      "Environment": "internal"
+    }
+  },
+  {
+    "resource_id": "vol-0333444555666777c",
+    "resource_name": "prod-core-db-data-volume",
+    "resource_type": "EBS",
+    "instance_type": "io2-2000GB-10000IOPS",
+    "cpu_utilization": 0.0,
+    "memory_utilization": 0.0,
+    "monthly_cost": 590.00,
+    "region": "us-east-1",
+    "environment": "production",
+    "resource_status": "in-use",
+    "criticality": "critical",
+    "last_activity": "2026-11-12T23:58:00Z",
+    "tags": {
+      "Owner": "DatabaseSRE",
+      "Tier": "MissionCritical",
+      "Environment": "production",
+      "DO_NOT_MODIFY": "true"
+    }
+  }
+]
